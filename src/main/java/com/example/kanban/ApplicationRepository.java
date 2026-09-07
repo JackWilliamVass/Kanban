@@ -4,12 +4,8 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.example.kanban.dto.UpdateApplicationDto;
+
 public interface ApplicationRepository extends JpaRepository<Application, Long> {
-	
-	List<Application> findByRole(String role);
-	
-	
-	List<Application> findByDate(boolean ascending);
-	List<Application> findByDeadline(boolean ascending);
 
 }
