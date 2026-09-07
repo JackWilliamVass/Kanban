@@ -53,5 +53,7 @@ public class ApplicationController {
 	@PatchMapping("/updateApplication")
 	public ResponseEntity<Application> updateApplication(@RequestBody UpdateApplicationDto application,
 			@RequestParam(value="id") Long id) {
+		service.updateApplication(application, id);
+		return new ResponseEntity<>(HttpStatusCode.valueOf(200));
 	}
 }
